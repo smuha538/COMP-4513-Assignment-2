@@ -19,21 +19,23 @@ const Results = (props) => {
         return currentText == "Show Results" ? "Show Qualifying" : "Show Results"
     }
 
-    const sortPositionAscending = (data) =>{
+    const sortPositionAscending = (data, url) =>{
+        // console.log(data)
+        // console.log(url)
         return data.sort(({ position: a }, { position: b }) => (a === null) - (b === null) || a - b)
     }
 
     useEffect( () => {
-            let url = `https://lucky-clean-ogre.glitch.me/api/results/${props.race}`;
+            let url = `https://lucky-clean-ogre.glitch.me/api/results/${props.race.raceId}`;
+            // console.log(props.race.raceId)
             fetch(url)
             .then( resp => resp.json() )
             .then( data => {
-                const sortedData = sortPositionAscending(data);
-                console.log(sortedData)
+                const sortedData = sortPositionAscending(data, url);
                 setResults(sortedData)})
             .catch( err => console.error(err));
 
-            url = `https://lucky-clean-ogre.glitch.me/api/qualifying/${props.race}`;
+            url = `https://lucky-clean-ogre.glitch.me/api/qualifying/${props.race.raceId}`;
             
             fetch(url)
             .then( resp => resp.json() )
@@ -42,18 +44,18 @@ const Results = (props) => {
                 setQualify(sortedData)})
             .catch( err => console.error(err));
             
-        },[props.race]);
+        },[props.race.raceId]);
 
     return(
     <div className=" ">
         <h1 className="text-4xl font-bold text-yellow-600 m-4 text-center py-10">Results</h1>
         <div>
-            <div className="inline-block px-6">Race name</div>
-            <div className="inline-block px-6">Round 1</div>
-            <div className="inline-block px-6">Year</div>
-            <div className="inline-block px-6">Circuit Name</div>
-            <div className="inline-block px-6">Date</div>
-            <div className="inline-block px-6">URL</div>
+            {/* <div className="inline-block px-6">Name: {props.race.name}</div>
+            <div className="inline-block px-6">Round: {props.race.round}</div>
+            <div className="inline-block px-6">Year: {props.race.year}</div>
+            <div className="inline-block px-6">Circuit: {props.race.circuits.name}</div>
+            <div className="inline-block px-6">Date: {props.race.date}</div>
+            <div className="inline-block px-6">URL: {props.race.url}</div> */}
             <div className="inline-block px-10">
                 <button onClick={hide}>{buttonText}</button>
             </div>
