@@ -15,8 +15,10 @@ const ConstructorDetails = (props) =>
         
     },[props.constructor]);
 
+    const details = `Name: ${constructorDetails.name}, Nationality: ${constructorDetails.nationality}, URL:  ${constructorDetails.url}`;
+
     return(
-        <DriverConstructorModal content={constructorDetails} header={'Constructor Details'} image={''}/>
+        <DriverConstructorModal content={details} header={'Constructor Details'} image={''}/>
     )
 }
 
