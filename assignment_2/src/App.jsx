@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Results from './components/results.jsx'
 import './App.css'
 import About from './components/about.jsx';
+import Standings from './components/standings.jsx';
 // import { createClient } from "@supabase/supabase-js";
 
 // const supaUrl = 'https://yuprihcjxllmezloeagx.supabase.co';
@@ -11,7 +12,7 @@ import About from './components/about.jsx';
 
 
 function App() {
-   const [currentRace, setRace] = useState([]);
+  const [currentRace, setRace] = useState([]);
   useEffect( () => {
     let url = `https://lucky-clean-ogre.glitch.me/api/races/1107`;
     fetch(url)
@@ -38,8 +39,8 @@ function App() {
   return (
    
       <>
-      <About/>
-      
+      {/* <About/> */}
+      {/* <Standings race={currentRace}/> */}
       <Results race={currentRace}/>
       </>
     )

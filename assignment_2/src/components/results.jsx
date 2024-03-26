@@ -50,12 +50,12 @@ const Results = (props) => {
     <div className=" ">
         <h1 className="text-4xl font-bold text-yellow-600 m-4 text-center py-10">Results</h1>
         <div>
-            {/* <div className="inline-block px-6">Name: {props.race.name}</div>
+            <div className="inline-block px-6">Name: {props.race.name}</div>
             <div className="inline-block px-6">Round: {props.race.round}</div>
             <div className="inline-block px-6">Year: {props.race.year}</div>
             <div className="inline-block px-6">Circuit: {props.race.circuits.name}</div>
             <div className="inline-block px-6">Date: {props.race.date}</div>
-            <div className="inline-block px-6">URL: {props.race.url}</div> */}
+            <div className="inline-block px-6">URL: {props.race.url}</div>
             <div className="inline-block px-10">
                 <button onClick={hide}>{buttonText}</button>
             </div>
