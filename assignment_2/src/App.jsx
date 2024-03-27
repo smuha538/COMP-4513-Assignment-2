@@ -5,6 +5,7 @@ import About from './components/about.jsx';
 import Standings from './components/standings.jsx';
 import DriverDetails from './components/driverDetails.jsx';
 import ConstructorDetails from './components/constructorDetails.jsx';
+import CircuitDetails from './components/circuitDetails.jsx';
 // import { createClient } from "@supabase/supabase-js";
 
 // const supaUrl = 'https://yuprihcjxllmezloeagx.supabase.co';
@@ -16,7 +17,7 @@ import ConstructorDetails from './components/constructorDetails.jsx';
 function App() {
   const [currentRace, setRace] = useState([]);
   useEffect( () => {
-    let url = `https://lucky-clean-ogre.glitch.me/api/races/1107`;
+    let url = `https://lucky-clean-ogre.glitch.me/api/races/1106`;
     fetch(url)
     .then( resp => resp.json() )
     .then( data =>{
@@ -44,9 +45,10 @@ function App() {
       {/* <About/> */}
       {/* <Standings race={currentRace}/> */}
       {/* <Results race={currentRace}/> */}
-      <DriverDetails driver={'norris'}/>
+      {/* <DriverDetails driver={'norris'}/>
       <DriverDetails driver={'hamilton'}/>
-      <ConstructorDetails constructor={'ferrari'}/>
+      <ConstructorDetails constructor={'ferrari'}/> */}
+      <CircuitDetails circuit={'monza'}/>
       </>
     )
 }
