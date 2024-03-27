@@ -3,6 +3,8 @@ import Results from './components/results.jsx'
 import './App.css'
 import About from './components/about.jsx';
 import Standings from './components/standings.jsx';
+
+import Header from './components/header.jsx';
 // import { createClient } from "@supabase/supabase-js";
 
 // const supaUrl = 'https://yuprihcjxllmezloeagx.supabase.co';
@@ -41,7 +43,8 @@ function App() {
       <>
       {/* <About/> */}
       {/* <Standings race={currentRace}/> */}
-      <Results race={currentRace}/>
+      {/* <Results race={currentRace}/> */}
+      <Header/>
       </>
     )
 }
