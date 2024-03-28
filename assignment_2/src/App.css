@@ -1,22 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-
-
-body{
-margin: 0px !important;
-
-}
-
-
-
-=======
-.leaflet-container {
-  width: 50%;
-  height: 30vh;
-  }
->>>>>>> 5e12cdedc465a7b72a9c45ad64c7e37fa9ecff0c
 /* #root {
   max-width: 1280px;
   margin: 0 auto;

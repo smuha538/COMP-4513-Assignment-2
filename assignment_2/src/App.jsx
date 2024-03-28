@@ -3,12 +3,14 @@ import Results from './components/results.jsx'
 import './App.css'
 import About from './components/about.jsx';
 import Standings from './components/standings.jsx';
-<<<<<<< HEAD
-=======
 import DriverDetails from './components/driverDetails.jsx';
 import ConstructorDetails from './components/constructorDetails.jsx';
 import CircuitDetails from './components/circuitDetails.jsx';
->>>>>>> 5e12cdedc465a7b72a9c45ad64c7e37fa9ecff0c
+
+import Header from './components/header.jsx';
+
+
+
 // import { createClient } from "@supabase/supabase-js";
 
 // const supaUrl = 'https://yuprihcjxllmezloeagx.supabase.co';
@@ -47,15 +49,14 @@ function App() {
       <>
       {/* <About/> */}
       {/* <Standings race={currentRace}/> */}
-<<<<<<< HEAD
-      <Results race={currentRace}/>
-=======
+      {/* <Results race={currentRace}/> */}
       {/* <Results race={currentRace}/> */}
       {/* <DriverDetails driver={'norris'}/>
       <DriverDetails driver={'hamilton'}/>
       <ConstructorDetails constructor={'ferrari'}/> */}
-      <CircuitDetails circuit={'monza'}/>
->>>>>>> 5e12cdedc465a7b72a9c45ad64c7e37fa9ecff0c
+      {/* <CircuitDetails circuit={'monza'}/> */}
+
+      <Header/>
       </>
     )
 }
