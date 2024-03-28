@@ -15,8 +15,9 @@ const DriverDetails = (props) =>
         
     },[props.driver]);
 
+    const details = `Name: ${driverDetails.forename}  ${driverDetails.surname}, Nationality: ${driverDetails.nationality}, URL:  ${driverDetails.url}`;
     return(
-        <DriverConstructorModal content={driverDetails} header={'Driver Details'} image={''}/>
+        <DriverConstructorModal content={details} header={'Driver Details'} image={''}/>
     )
 }
 

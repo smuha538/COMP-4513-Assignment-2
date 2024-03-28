@@ -55,7 +55,7 @@ const Results = (props) => {
             <div className="inline-block px-6">Year: {props.race.year}</div>
             <div className="inline-block px-6">Circuit: {props.race.circuits.name}</div>
             <div className="inline-block px-6">Date: {props.race.date}</div>
-            <div className="inline-block px-6">URL: {props.race.url}</div>
+            <div className="inline-block px-6">URL: {props.race.url}</div> */}
             <div className="inline-block px-10">
                 <button onClick={hide}>{buttonText}</button>
             </div> */}
